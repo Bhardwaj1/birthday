@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 350 30% 6%;
+    --foreground: 40 50% 95%;
+    --card: 350 25% 12%;
+    --card-foreground: 40 50% 95%;
+    --popover: 350 25% 12%;
+    --popover-foreground: 40 50% 95%;
+    --primary: 340 80% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35 80% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 350 20% 15%;
+    --muted-foreground: 350 15% 60%;
+    --accent: 35 80% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 350 20% 20%;
+    --input: 350 20% 20%;
+    --ring: 340 80% 60%;
+    --chart-1: 340 80% 60%;
+    --chart-2: 35 80% 55%;
+    --chart-3: 280 60% 50%;
+    --chart-4: 190 70% 50%;
+    --chart-5: 50 90% 60%;
+    --radius: 0.75rem;
+    --sidebar-background: 350 25% 10%;
+    --sidebar-foreground: 40 50% 95%;
+    --sidebar-primary: 340 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 350 20% 15%;
+    --sidebar-accent-foreground: 40 50% 95%;
+    --sidebar-border: 350 20% 20%;
+    --sidebar-ring: 340 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+  20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.animate-shake {
+  animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.animate-confetti {
+  animation: confetti-fall 3s linear forwards;
+}
