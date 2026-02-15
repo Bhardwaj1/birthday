@@ -120,7 +120,7 @@ function BirthdayText() {
     <Center position={[0, 1.5, 0]}>
       <Float speed={2} rotationIntensity={0.1} floatIntensity={0.3}>
         <Text3D
-          font={helvetikerFont}
+          font={helvetikerFont as unknown as string}
           size={0.5}
           height={0.15}
           bevelEnabled
