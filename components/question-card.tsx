@@ -8,12 +8,12 @@ interface QuestionCardProps {
   onCorrectAnswer: () => void
 }
 
-const QUESTION = "What is the one thing that makes every birthday special?"
+const QUESTION = "Which is your faevorite nickname?"
 const OPTIONS = [
-  { text: "Expensive Gifts", correct: false },
-  { text: "The People Who Love You", correct: true },
-  { text: "A Fancy Party", correct: false },
-  { text: "Social Media Wishes", correct: false },
+  { text: "Poplu", correct: false },
+  { text: "Khoman", correct: false },
+  { text: "Bhalu", correct: false },
+  { text: "Kiku", correct: true },
 ]
 
 export default function QuestionCard({ onCorrectAnswer }: QuestionCardProps) {

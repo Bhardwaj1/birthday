@@ -1,9 +1,10 @@
 "use client"
 
-import { useRef, useMemo } from "react"
+import { Suspense, useMemo, useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
-import { Text3D, Center, Float, Environment, MeshDistortMaterial } from "@react-three/drei"
+import { Text3D, Center, Float, MeshDistortMaterial } from "@react-three/drei"
 import * as THREE from "three"
+import helvetikerFont from "three/examples/fonts/helvetiker_bold.typeface.json"
 
 function CakeBase() {
   const cakeRef = useRef<THREE.Group>(null)
@@ -119,7 +120,7 @@ function BirthdayText() {
     <Center position={[0, 1.5, 0]}>
       <Float speed={2} rotationIntensity={0.1} floatIntensity={0.3}>
         <Text3D
-          font="https://threejs.org/examples/fonts/helvetiker_bold.typeface.json"
+          font={helvetikerFont}
           size={0.5}
           height={0.15}
           bevelEnabled
@@ -197,7 +198,6 @@ function Scene3D() {
       <CakeBase />
       <FloatingHearts count={12} />
       <GlowingParticles count={50} />
-      <Environment preset="sunset" />
     </>
   )
 }
@@ -211,7 +211,9 @@ export default function BirthdayCard3D() {
           background: "linear-gradient(180deg, #1a0a10 0%, #2d1020 50%, #1a0a10 100%)",
         }}
       >
-        <Scene3D />
+        <Suspense fallback={null}>
+          <Scene3D />
+        </Suspense>
       </Canvas>
     </div>
   )

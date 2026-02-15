@@ -5,37 +5,37 @@ import Image from "next/image"
 
 const memories = [
   {
-    src: "https://picsum.photos/id/1062/1200/900",
+    src: "/memories/IMG1.jpg",
     alt: "Friends celebrating at a birthday party",
     caption: "The night we laughed until our stomachs hurt",
     rotation: -3,
   },
   {
-    src: "https://picsum.photos/id/1027/1200/900",
+    src: "/memories/IMG2.jpg",
     alt: "A beautiful birthday cake with candles",
     caption: "Remember this cake? Best one ever!",
     rotation: 2,
   },
   {
-    src: "https://picsum.photos/id/1005/1200/900",
+    src: "/memories/IMG3.jpg",
     alt: "Group selfie with party hats",
     caption: "The squad that always shows up",
     rotation: -2,
   },
   {
-    src: "https://picsum.photos/id/1011/1200/900",
+    src: "/memories/IMG4.jpg",
     alt: "Sunset celebration on a rooftop",
     caption: "That magical golden hour moment",
     rotation: 3,
   },
   {
-    src: "https://picsum.photos/id/1012/1200/900",
+    src: "/memories/IMG5.jpg",
     alt: "Opening gifts and laughing together",
     caption: "Your face when you opened that gift!",
     rotation: -1,
   },
   {
-    src: "https://picsum.photos/id/1035/1200/900",
+    src: "/memories/IMG6.jpg",
     alt: "Outdoor adventure with friends",
     caption: "Adventures are better with you",
     rotation: 2,
