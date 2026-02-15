@@ -7,38 +7,44 @@ const memories = [
   {
     src: "/memories/IMG1.jpg",
     alt: "Friends celebrating at a birthday party",
-    caption: "The night we laughed until our stomachs hurt",
+    caption: "Your kindness makes everyone around you feel at home",
     rotation: -3,
+    objectPosition: "center 35%",
   },
   {
     src: "/memories/IMG2.jpg",
     alt: "A beautiful birthday cake with candles",
-    caption: "Remember this cake? Best one ever!",
+    caption: "Your honesty and pure heart are your most beautiful qualities",
     rotation: 2,
+    objectPosition: "center 18%",
   },
   {
     src: "/memories/IMG3.jpg",
     alt: "Group selfie with party hats",
-    caption: "The squad that always shows up",
+    caption: "You carry strength so gracefully, even in tough moments",
     rotation: -2,
+    objectPosition: "center 18%",
   },
   {
     src: "/memories/IMG4.jpg",
     alt: "Sunset celebration on a rooftop",
-    caption: "That magical golden hour moment",
+    caption: "Your smile brings calm, warmth, and peace to people",
     rotation: 3,
+    objectPosition: "center 35%",
   },
   {
     src: "/memories/IMG5.jpg",
     alt: "Opening gifts and laughing together",
-    caption: "Your face when you opened that gift!",
+    caption: "You inspire with your patience, humility, and quiet confidence",
     rotation: -1,
+    objectPosition: "center 28%",
   },
   {
     src: "/memories/IMG6.jpg",
     alt: "Outdoor adventure with friends",
-    caption: "Adventures are better with you",
+    caption: "You are thoughtful, caring, and truly one of a kind",
     rotation: 2,
+    objectPosition: "center 28%",
   },
 ]
 
@@ -109,6 +115,7 @@ export default function PhotoCollage() {
                   alt={memory.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  style={{ objectPosition: memory.objectPosition }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
